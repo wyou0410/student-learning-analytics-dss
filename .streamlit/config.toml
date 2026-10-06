@@ -1,0 +1,16 @@
+[browser]
+gatherUsageStats = false
+
+[server]
+address = "127.0.0.1"
+
+[client]
+toolbarMode = "viewer"
+
+[theme]
+base = "light"
+primaryColor = "#147D72"
+backgroundColor = "#F7F9F8"
+secondaryBackgroundColor = "#EDF4F1"
+textColor = "#18354A"
+font = "sans serif"
