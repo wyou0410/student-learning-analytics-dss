@@ -1,0 +1,6 @@
+version: "2.0.0-demo"
+stable_score: 0.70
+min_questions: 5
+min_tasks: 2
+comparison_change: 0.15
+evidence_note: "题目设定标签下的阶段表现，阈值待教师审阅，不是固定能力诊断。"

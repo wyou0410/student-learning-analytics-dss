@@ -1,0 +1,15 @@
+version: "1.0.0"
+low_score: 0.60
+min_questions: 5
+min_tasks: 2
+decline: 0.15
+volatility: 0.20
+repeat_tasks: 3
+progress: 0.15
+enrichment_score: 0.85
+enrichment_questions: 8
+enrichment_tasks: 3
+hard_min: 3
+independence_enabled: true
+independence_min: 5
+independence_ratio: 0.50

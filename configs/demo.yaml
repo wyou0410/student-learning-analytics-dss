@@ -1,0 +1,11 @@
+generator_version: "1.0.0"
+seed: 42
+students: 80
+classes: 2
+weeks: 6
+start: "2026-02-02T00:00:00Z"
+as_of: "2026-03-16T23:59:59Z"
+window_days: 14
+missing_submission_probability: 0.06
+missing_score_probability: 0.02
+llm_enabled: false
