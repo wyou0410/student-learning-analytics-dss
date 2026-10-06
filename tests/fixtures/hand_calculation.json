@@ -1,0 +1,16 @@
+{
+  "synthetic": true,
+  "scores": [2, 1, 0, null],
+  "max_scores": [2, 2, 2, 2],
+  "later_retry_score": 2,
+  "hand_expected": {
+    "n": 3,
+    "score_sum": 3,
+    "max_sum": 6,
+    "score_rate": 0.5,
+    "correct_n": 1,
+    "correct_rate_fraction": "1/3",
+    "retry_delta": 1.0
+  },
+  "rationale": "Null excluded, not zero. Retry does not change first metrics; 3/6=0.5, 1/3 fully correct."
+}
