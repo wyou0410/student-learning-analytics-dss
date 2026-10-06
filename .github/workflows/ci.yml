@@ -1,0 +1,27 @@
+name: Tests and synthetic demo
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: astral-sh/setup-uv@d0d8abe699bfb85fec6de9f7adb5ae17292296ff # v6
+        with:
+          version: "0.11.30"
+          python-version: "3.12"
+          enable-cache: true
+      - name: Install locked environment
+        run: uv sync --locked --extra dev
+      - name: Test calculation contracts and teacher interface
+        run: uv run pytest -q --junitxml=artifacts/ci-tests.xml
+      - name: Run the complete synthetic pipeline
+        run: uv run learning-support demo --no-ui
